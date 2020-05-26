@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon's Daily Journal</title>
+    <link rel="stylesheet" href="styles/journal.css">
+</head>
+<body>
+    <h1>Brandon's Daily Journal</h1>
+    <div class="flex-container">
+        <form action="">
+            <fieldset>
+                <label for="journalDate">Date of Entry</label><br>
+                <input id="journalDate" type="date" name="journalDate" >
+            </fieldset>
+        </form>
+        <form action="">
+            <fieldset>
+                <label for="conceptsCovered">Concepts Covered</label><br>
+                <input id="conceptsCovered" type="input" name="conceptsCovered" >
+            </fieldset>
+        </form>
+        <form action="">
+            <fieldset>
+                <label for="journalEntry">Journal Entry</label><br>
+                <textarea id="journalEntry" name="conceptsCovered" rows="2" columns="25"></textarea>
+            </fieldset>
+        </form>
+        <form action="">
+            <fieldset>
+                <label for="mood">Mood of the Day</label><br>
+                <select id="mood" name="mood">
+                    <option value="Happy">Happy</option>
+                    <option value="Fine">Fine</option>
+                    <option value="Sad">Sad</option>
+                </select>
+            </fieldset>
+        </form>
+            <input id="submit" type="submit" value="Record Journal Entry">
+    </div>
+
+</body>
+</html>

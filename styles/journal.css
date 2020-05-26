@@ -1,0 +1,13 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+#conceptsCovered {
+    width: auto;
+}
+
+#submit {
+    width: 12em;
+}
