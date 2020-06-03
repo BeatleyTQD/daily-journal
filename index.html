@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandon's Daily Journal</title>
     <link rel="stylesheet" href="styles/journal.css">
+    <script src="scripts/journal.js"></script>
 </head>
+
 <body>
     <h1>Brandon's Daily Journal</h1>
     <div class="flex-container">
@@ -23,14 +25,14 @@
         </form>
         <form action="">
             <fieldset>
-                <label for="journalEntry">Journal Entry</label><br>
-                <textarea id="journalEntry" name="conceptsCovered" rows="2" columns="25"></textarea>
+                <label for="journalEntryContent">Journal Entry</label><br>
+                <textarea id="journalEntryContent" name="journalEntryContent" rows="2" columns="25"></textarea>
             </fieldset>
         </form>
         <form action="">
             <fieldset>
                 <label for="mood">Mood of the Day</label><br>
-                <select id="mood" name="mood">
+                <select id="mood" name="journalMood">
                     <option value="Happy">Happy</option>
                     <option value="Fine">Fine</option>
                     <option value="Sad">Sad</option>
