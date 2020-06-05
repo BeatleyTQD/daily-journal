@@ -2,7 +2,7 @@
     Define the keys and value for a JavaScript object that
     represents a journal entry about what you learned today
 */
-const allJournalEntries = [
+let allJournalEntries = [
     {
         date: "5/26/2020",
         concept: "Github",
@@ -27,11 +27,11 @@ const allJournalEntries = [
     Purpose: To create, and return, a string template that
     represents a single journal entry object as HTML
 */
-const makeJournalEntryComponent = () => {
+const makeJournalEntryComponent = (journalEntry) => {
     const journalHTMLRepresentation =
-    `   <h2>${allJournalEntries.concept}</h2>
-        <div>${allJournalEntries.content}</div>
-        <div>${allJournalEntries.date}</div>    
+    `   <h2>${journalEntry.concept}</h2>
+        <div>${journalEntry.content}</div>
+        <div>${journalEntry.date}</div>    
     `
     return journalHTMLRepresentation
 }
@@ -42,7 +42,7 @@ const makeJournalEntryComponent = () => {
 
     Arguments: entries (array of objects)
 */
-const renderJournalEntries = (entries) => {
+const renderJournalEntries = () => {
     for (const entry of allJournalEntries) {
         const journalHTMLRepresentation = makeJournalEntryComponent(entry)
         const journalArticleElement = document.querySelector(".entryLog")
