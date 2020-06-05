@@ -2,26 +2,31 @@
     Define the keys and value for a JavaScript object that
     represents a journal entry about what you learned today
 */
-let allJournalEntries = [
-    {
-        date: "5/26/2020",
-        concept: "Github",
-        content: "Today we were introduced to pushing and pulling with Github. My brain is fried.",
-        mood: "excited"
-    },
-    {
-        date: "5/27/2020",
-        concept: "More Github, CSS",
-        content: "I feel much better about using github and have also crammed more flexbox usage into my brain.",
-        mood: "sleepy"
-    },
-    {
-        date: "5/28/2020",
-        concept: "generating a 'final' project merge",
-        content: "Today we finished our first group project and went through the process of merging everyone's final versions into the final master",
-        mood: "victorious"
-    }
-]
+let allJournalEntries = []
+
+// const getJournalData = () => {
+// // Pulling data from API 
+// return fetch("http://localhost:3000/entries").then(
+//     response => response.json()).then({entries) => {
+//        allJournalEntries = entries
+//     })
+// }
+
+const getJournalEntry = () => {
+    return fetch("http://localhost:3000/entries").then(
+        (httpResponse) => {
+            return httpResponse.json()
+        }
+    )
+        .then(
+            (arrayJournalEntries) => {
+                // 100 percent sure the data is back
+                allJournalEntries = arrayJournalEntries
+            }
+        )
+}
+
+
 
 /*
     Purpose: To create, and return, a string template that
@@ -52,4 +57,9 @@ const renderJournalEntries = () => {
 }
 
 // Invoke the render function
-renderJournalEntries()
+
+getJournalEntry().then(
+    () => {
+        renderJournalEntries()
+    }
+)
