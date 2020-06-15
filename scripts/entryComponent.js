@@ -12,3 +12,5 @@ const journalEntry = {
         return journalHTMLRepresentation
     }
 }
+
+export default journalEntry
