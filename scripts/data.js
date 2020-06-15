@@ -1,16 +1,4 @@
-// const getJournalEntry = () => {
-//     return fetch("http://localhost:3000/entries").then(
-//         (httpResponse) => {
-//             return httpResponse.json()
-//         }
-//     )
-//         .then(
-//             (arrayJournalEntries) => {
-//                 // 100 percent sure the data is back
-//                 allJournalEntries = arrayJournalEntries
-//             }
-//         )
-// }
+let allJournalEntries = []
 
 const API = {
     getJournalEntries () {
