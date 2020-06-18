@@ -6,9 +6,10 @@
 const journalEntry = {
     makeJournalEntryComponent (journalEntry) {
         const journalHTMLRepresentation =
-        `   <h2>${journalEntry.concept}</h2>
+        `   <h2>${journalEntry.date}</h2>
+            <h3>${journalEntry.concept}</h3>
             <div>${journalEntry.content}</div>
-            <div>${journalEntry.date}</div>    
+            <div>${journalEntry.mood}</div>     
         `
         return journalHTMLRepresentation
     }
