@@ -2,24 +2,31 @@
   "entries": [
     {
       "id": 1,
-      "date": "5/26/2020",
+      "date": "2020-06-18",
       "concept": "Github",
       "content": "Today we were introduced to pushing and pulling with Github. My brain is fried.",
       "mood": "excited"
     },
     {
       "id": 2,
-      "date": "5/27/2020",
+      "date": "2020-06-18",
       "concept": "More Github, CSS",
       "content": "I feel much better about using github and have also crammed more flexbox usage into my brain.",
       "mood": "sleepy"
     },
     {
       "id": 3,
-      "date": "5/28/2020",
+      "date": "2020-06-18",
       "concept": "generating a 'final' project merge",
       "content": "Today we finished our first group project and went through the process of merging everyone's final versions into the final master",
       "mood": "victorious"
+    },
+    {
+      "date": "2020-06-18",
+      "concept": "sdf",
+      "content": "sdf",
+      "mood": "Happy",
+      "id": 4
     }
   ]
 }
