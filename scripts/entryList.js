@@ -4,12 +4,12 @@ let allJournalEntries = []
 
 const journalMaker = {
     renderJournalEntries (allJournalEntries) {
+        const journalArticleElement = document.querySelector(".entryLog")
+        journalArticleElement.innerHTML = ""
         for (const entry of allJournalEntries) {
             const journalHTMLRepresentation = journalEntry.makeJournalEntryComponent(entry)
-            const journalArticleElement = document.querySelector(".entryLog")
             journalArticleElement.innerHTML += journalHTMLRepresentation
-        }
-        
+        }        
     }  
 }
 
