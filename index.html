@@ -9,7 +9,9 @@
 </head>
 
 <body>
+    <main>
     <h1>Brandon's Daily Journal</h1>
+    <input type="hidden" id="journalId" value="" />
     <div class="flex-container">
         <form action="">
             <fieldset>
@@ -39,12 +41,20 @@
                 </select>
             </fieldset>
         </form>
-            <input id="submit" type="submit" value="Record Journal Entry">
-            <article class="entryLog">
-
-            </article>
+        <input id="submit" type="submit" value="Record Journal Entry">
+        <fieldset>
+            <legend>Filter Entries by Mood</label><br>
+                <input type="radio" id="Happy" name="mood" value="Happy">
+                <label for="Happy">Happy</label>
+                <input type="radio" id="Sad" name="mood" value="Sad">
+                <label for="Sad">Sad</label>
+                <input type="radio" id="Fine" name="mood" value="Fine">
+                <label for="Fine">Fine</label>
+        </fieldset>
+        <article id="entryLog">
+        </article>
         </div>
-        
+    </main>
         <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

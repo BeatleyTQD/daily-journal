@@ -5,35 +5,35 @@
       "date": "2020-06-18",
       "concept": "Github",
       "content": "Today we were introduced to pushing and pulling with Github. My brain is fried.",
-      "mood": "excited"
-    },
-    {
-      "id": 2,
-      "date": "2020-06-18",
-      "concept": "More Github, CSS",
-      "content": "I feel much better about using github and have also crammed more flexbox usage into my brain.",
-      "mood": "sleepy"
+      "mood": "Happy"
     },
     {
       "id": 3,
       "date": "2020-06-18",
       "concept": "generating a 'final' project merge",
       "content": "Today we finished our first group project and went through the process of merging everyone's final versions into the final master",
-      "mood": "victorious"
+      "mood": "Sad"
     },
     {
-      "date": "2020-06-18",
-      "concept": "test6vg",
-      "content": "etstvcxv",
-      "mood": "Sad",
+      "date": "2020-06-22",
+      "concept": "test ",
+      "content": "test",
+      "mood": "Happy",
       "id": 4
     },
     {
-      "date": "2020-06-18",
-      "concept": "test6vg",
-      "content": "etstvcxv",
-      "mood": "Sad",
+      "date": "2020-06-23",
+      "concept": "test 2",
+      "content": "test2",
+      "mood": "Fine",
       "id": 5
+    },
+    {
+      "date": "2020-06-24",
+      "concept": "test 3",
+      "content": "test3",
+      "mood": "Sad",
+      "id": 6
     }
   ]
 }

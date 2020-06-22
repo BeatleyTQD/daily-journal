@@ -1,9 +1,15 @@
 import API from "./data.js"
 import journalMaker from "./entryList.js"
 import createJournalEntry from "./createEntry.js"
+import updateJournalFields from "./updatedJournalFields.js"
+
 // import journalGrabber from "./journalGrabber.js"  --think this is the direction to go
 
 
+API.getJournalEntries()
+.then((response) => {
+    journalMaker.renderJournalEntries(response)
+})
 
 document.querySelector("#submit").addEventListener("click", clickEvent => {
     const date = document.querySelector("#journalDate").value
@@ -25,4 +31,45 @@ document.querySelector("#submit").addEventListener("click", clickEvent => {
     else (alert("Please fill out entire form and resubmit!"));
 }   )
 
+//Mood filtering///////////////////////////////////////////
+const moodFilterSelection = document.getElementsByName("mood")
 
+moodFilterSelection.forEach(radioButton => {
+    radioButton.addEventListener("click", event => {
+        const mood = event.target.value
+        console.log("Mood Filter Selection:", mood)
+        API.getJournalEntries()
+        .then((response) => {
+            let filteredMoodChoice = response.filter(filteredMood => {
+                return filteredMood.mood === mood
+            })
+        journalMaker.renderJournalEntries(filteredMoodChoice)
+        })
+    })
+});
+
+
+//////////////////////////////////////////////////////////
+
+//Delete Button/////////////////////////////////////////////
+const entryLog = document.querySelector("#entryLog");
+
+const entryListener = () => {
+    entryLog.addEventListener("click", event => {
+        console.log("delete listener")
+        if (event.target.id.startsWith("deleteEntry--")) {
+            const entryToDelete = event.target.id.split("--")[1]
+            console.log(entryToDelete)
+            API.deleteJournalEntry(entryToDelete)
+            .then(API.getJournalEntries)
+            .then(journalMaker.renderJournalEntries)
+        } else if (event.target.id.startsWith("editEntry--")) {
+            const entryToEdit = event.target.id.split("--")[1];
+            console.log(entryToEdit);
+            API.getSingleEntry(entryToEdit)
+            .then(journalEntry => updateJournalFields(journalEntry))
+        }
+    })
+}
+
+entryListener()
