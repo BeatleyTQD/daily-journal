@@ -13,3 +13,5 @@ const updateJournalFields = (journalEntry) => {
 }
 
 export default updateJournalFields;
+
+
