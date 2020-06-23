@@ -5,11 +5,11 @@ const updateJournalFields = (journalEntry) => {
     let contentInput = document.querySelector("#journalEntryContent")
     let moodInput = document.querySelector("#mood")
 
-    hidddenJournalId = journalEntry.id;
-    dateInput = journalEntry.dateInput;
-    conceptInput = journalEntry.concept;
-    contentInput = journalEntry.content;
-    moodInput = journalEntry.mood;
+    hidddenJournalId.value = journalEntry.id;
+    dateInput.value = journalEntry.date;
+    conceptInput.value = journalEntry.concept;
+    contentInput.value = journalEntry.content;
+    moodInput.value = journalEntry.mood;
 }
 
 export default updateJournalFields;

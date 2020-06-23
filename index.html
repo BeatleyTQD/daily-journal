@@ -14,7 +14,7 @@
 
     <div class="flex-container">
         <form action="">
-            <input type="hidden" id="entryId" value="">
+            <input type="hidden" id="journalId" value="" />
             <fieldset>
                 <label for="journalDate">Date of Entry</label><br>
                 <input id="journalDate" type="date" name="journalDate" >
@@ -42,7 +42,12 @@
                 </select>
             </fieldset>
         </form>
+        <fieldset>
         <input id="submit" type="submit" value="Record Journal Entry">
+    </div>
+
+
+        </fieldset>
         <fieldset>
             <legend>Filter Entries by Mood</label><br>
                 <input type="radio" id="Happy" name="mood" value="Happy">
@@ -54,7 +59,6 @@
         </fieldset>
         <article id="entryLog">
         </article>
-        </div>
     </main>
         <script type="module" src="scripts/main.js"></script>
 </body>

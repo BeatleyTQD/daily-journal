@@ -25,13 +25,13 @@ const API = {
         return fetch(`${url}/${id}`)
         .then(response => response.json());
     },
-    updateJournalEntry (id, updatedJournalFields) {
+    updateJournalEntry (id, updateJournalFields) {
         return fetch(`${url}/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
         	},
-        	body: JSON.stringify(updatedSweetObj)
+        	body: JSON.stringify(updateJournalFields)
             })
         }
     }

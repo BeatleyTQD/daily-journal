@@ -1,6 +1,5 @@
 import journalEntry from "./entryComponent.js"
 
-let allJournalEntries = []
 
 const journalMaker = {
     renderJournalEntries (allJournalEntries) {
@@ -9,7 +8,7 @@ const journalMaker = {
         for (const entry of allJournalEntries) {
             const journalHTMLRepresentation = journalEntry.makeJournalEntryComponent(entry)
             journalArticleElement.innerHTML += journalHTMLRepresentation
-        }        
+        }       
     }  
 }
 
