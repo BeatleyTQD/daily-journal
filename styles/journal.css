@@ -11,3 +11,12 @@
 #submit {
     width: 12em;
 }
+
+.filterArea {
+    display: flex;
+}
+
+.filterBox {
+    width: 40%;
+    margin: 1em;
+}

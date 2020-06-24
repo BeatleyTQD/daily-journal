@@ -5,7 +5,6 @@ const createJournalEntry = (date, concept, content, mood) => {
         "content": content,
         "mood": mood
     }
-    console.log(journalEntry)
     return journalEntry
 }
 

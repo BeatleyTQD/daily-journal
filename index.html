@@ -45,11 +45,12 @@
         <fieldset>
         <input id="submit" type="submit" value="Record Journal Entry">
     </div>
-
+<hr/>
 
         </fieldset>
-        <fieldset>
-            <legend>Filter Entries by Mood</label><br>
+    <div class="filterArea">
+        <fieldset class="filterBox">
+                <legend><label>Filter Entries by Mood</label></legend>
                 <input type="radio" id="Happy" name="mood" value="Happy">
                 <label for="Happy">Happy</label>
                 <input type="radio" id="Sad" name="mood" value="Sad">
@@ -57,6 +58,11 @@
                 <input type="radio" id="Fine" name="mood" value="Fine">
                 <label for="Fine">Fine</label>
         </fieldset>
+        <fieldset class="filterBox">
+            <legend><label>Search Journal Entries</label></legend>
+            <input type="text" placeholder="Enter search term" id="journalSearch" />
+        </fieldset>
+    </div>
         <article id="entryLog">
         </article>
     </main>

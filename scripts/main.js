@@ -51,8 +51,6 @@ moodFilterSelection.forEach(radioButton => {
     radioButton.addEventListener("click", event => {
         const mood = event.target.value
         console.log("Mood Filter Selection:", mood)
-
-
         API.getJournalEntries()
         .then((response) => {
             let filteredMoodChoice = response.filter(filteredMood => {
@@ -62,6 +60,19 @@ moodFilterSelection.forEach(radioButton => {
         })
     })
 });
+
+const journalSearch = document.querySelector("#journalSearch")
+
+.addEventListener("keypress", keyPressEvent => {
+    if (keyPressEvent.charCode === 13) {
+        let searchTerm = keyPressEvent.target.value;
+        console.log("user search term: ", searchTerm);
+        
+    }
+    }
+)
+        
+        /* WHEN  USER PRESSES ENTER, FIND MATCHING JOURNAL ENTRY */
 
 
 //////////////////////////////////////////////////////////
